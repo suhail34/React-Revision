@@ -1,11 +1,11 @@
 import * as actionType from '../actions/ActionType';
 
-const reducer = (state=0, action) => {
+const reducer = (state=[], action) => {
   switch(action.type) {
-    case actionType.INCREMENT:
-      return state+1;
-    case actionType.DECREMENT:
-      return state-1;
+    case actionType.GET_TODOS:
+      return [...action.payload.todos];
+    case actionType.CLEAR_TODOS:
+      return [];
     default:
       return state;
   }

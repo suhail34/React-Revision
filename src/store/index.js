@@ -1,19 +1,11 @@
-import * as actionType from '../actions/ActionType'
-import {createStore} from 'redux';
+import {applyMiddleware, createStore} from 'redux';
 import reducer from '../reducers';
+import thunk from 'redux-thunk';
 
-const store = createStore(reducer);
+const store = createStore(reducer, applyMiddleware(thunk));
 
 store.subscribe(() => {
   console.log('current State ', store.getState())
-})
-
-store.dispatch({
-  type: actionType.INCREMENT
-})
-
-store.dispatch({
-  type: actionType.DECREMENT
 })
 
 export default store;

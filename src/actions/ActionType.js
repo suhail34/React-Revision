@@ -1,2 +1,2 @@
-export const INCREMENT = 'INCREMENT_NUMBER';
-export const DECREMENT = 'DECCREMENT_NUMBER';
+export const GET_TODOS = 'GET_TODOS';
+export const CLEAR_TODOS = 'CLEAR_TODOS';

@@ -1,9 +1,16 @@
 import * as actiontype from "./ActionType"
 
-const increment = () => {
-  type: actiontype.INCREMENT;
+export const get_todos = (todos) => {
+  return {
+    type: actiontype.GET_TODOS,
+    payload: {
+      todos: todos
+    }
+  }
 }
 
-const decrement = () => {
-  type: actiontype.DECREMENT;
+export const clear_todos = () => {
+  return {
+    type: actiontype.CLEAR_TODOS
+  }
 }
